@@ -1,7 +1,7 @@
 
 void DotNetBuild(DirectoryPath path, string version, string config = "Debug")
 {
-    ProcessExecute("dotnet", $"build --no-incremental -c {config} /p:Version={version}", path);
+    ProcessExecute("dotnet", $"build --no-incremental -c {config} -r win10-x64 /p:Version={version}", path);
 }
 
 void DotNetTest(DirectoryPath path, string config = "Debug")
@@ -11,7 +11,7 @@ void DotNetTest(DirectoryPath path, string config = "Debug")
 
 void DotNetPublish(DirectoryPath path, string output, string version, string config = "Debug")
 {
-    ProcessExecute("dotnet", $"publish -o {output} -c {config} /p:Version={version}", path);
+    ProcessExecute("dotnet", $"publish -o {output} -c {config} -r win10-x64 /p:Version={version}", path);
 }
 
 void DotNetRun(DirectoryPath path, string config = "Debug")
@@ -21,5 +21,5 @@ void DotNetRun(DirectoryPath path, string config = "Debug")
 
 void DotNetRestore(DirectoryPath path)
 {
-    ProcessExecute("dotnet", $"restore", path);
+    ProcessExecute("dotnet", $"restore -r win10-x64", path);
 }

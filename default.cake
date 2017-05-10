@@ -48,7 +48,8 @@ Task("Test")
 Task("Package")
     .Does(() => {
         //Build/Publish DotNet artifacts, build Docker image
-        DotNetPublish(Config.Projects.DockerProxy.GetDirectory(), Config.Artifacts.FullPath, Config.Version.Full, configuration);
+        var artifactPath = System.IO.Path.GetFullPath(Config.Artifacts + "/DockerProxy-" + Config.Version.Semantic);
+        DotNetPublish(Config.Projects.DockerProxy.GetDirectory(), artifactPath, Config.Version.Full, configuration);
     });
 
 Task("Publish")

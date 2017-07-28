@@ -16,6 +16,7 @@ namespace DockerProxy
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:5050/")
                 .Build();
 
             host.Run();

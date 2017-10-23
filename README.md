@@ -2,7 +2,7 @@
 Proxies loopback (localhost) traffic for Docker Windows Containers to work around Windows NAT limitations.
 
 ## Why
-Windows Containers running on Docker for Windows don't accept connections from/to localhost.  There are several references to this issue:
+Windows Containers running on Docker for Windows (when using the default 'nat' networking) don't accept connections from/to localhost.  There are several references to this issue:
 
 [Scott Hanselman calling it a bug](https://www.hanselman.com/blog/ExploringASPNETCoreWithDockerInBothLinuxAndWindowsContainers.aspx)
 

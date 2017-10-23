@@ -1,6 +1,8 @@
 #tool "nuget:?package=Cake.CoreCLR";
-#addin "Cake.Json"
-#addin "Cake.FileHelpers"
+#addin "Cake.Json";
+#addin "Cake.FileHelpers";
+#addin "Newtonsoft.Json";
+
 #load "./cake/all.cake";
 
 //Arguments

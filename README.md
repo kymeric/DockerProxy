@@ -1,6 +1,9 @@
 # DockerProxy
 Proxies loopback (localhost) traffic for Docker Windows Containers to work around Windows NAT limitations.
 
+## UPDATE
+This NAT issue has been resolved on newer Windows Insider builds (stable and fast ring) and with the latest versions of Docker.  There are still people out there on RTM versions of Windows where this utility could be useful, but I didn't like writing or having to run this utility.  So if you don't like running it and it's feasible for you, upgrading to the Windows Insider Slow Ring release will remove the need.
+
 ## How
 To run DockerProxy, you'll need to either:
 
